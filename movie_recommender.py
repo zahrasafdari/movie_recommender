@@ -14,8 +14,8 @@ get_ipython().run_line_magic('matplotlib', 'inline')
 # In[6]:
 
 
-movies_df = pd.read_csv('/Users/Lenovo/Desktop/machine_learning_with_python_jadi-main/movies.csv')
-ratings_df = pd.read_csv('/Users/Lenovo/Desktop/machine_learning_with_python_jadi-main/ratings_sample.csv')
+movies_df = pd.read_csv('movies.csv')
+ratings_df = pd.read_csv('ratings_sample.csv')
 movies_df.head()
 
 
@@ -149,7 +149,6 @@ genreTable.shape
 # In[30]:
 
 
-#Multiply the genres by the weights and then take the weighted average
 recommendationTable_df = ((genreTable*userProfile).sum(axis=1))/(userProfile.sum())
 recommendationTable_df.head()
 
